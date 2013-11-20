@@ -56,6 +56,8 @@ audio {width:42px;width: 42px;
 
 /* flip speed goes here */
 .flipper {
+    transition: 0.6s;
+	transform-style: preserve-3d;
 	-webkit-transition: 0.6s;
 	-webkit-transform-style: preserve-3d;
 
@@ -64,6 +66,7 @@ audio {width:42px;width: 42px;
 
 /* hide back of pane during swap */
 .front, .back {
+    backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 
 	position: absolute;
@@ -78,6 +81,7 @@ audio {width:42px;width: 42px;
 
 /* back, initially hidden pane */
 .back {
+    transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
 }
 
